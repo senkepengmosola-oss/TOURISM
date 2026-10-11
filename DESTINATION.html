@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Destinations | Discover Lesotho</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <style>
+
+       
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f5f0;
+            color: #333;
+        }
+
+
+        
+
+        .navbar {
+            background-color: #263238 !important;
+        }
+
+        .navbar-brand {
+            color: #d4a017 !important;
+            font-size: 22px;
+        }
+
+        .nav-link {
+            color: white !important;
+            margin-left: 8px;
+            padding: 8px 15px !important;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            background-color: #d4a017;
+            color: #222 !important;
+        }
+
+
+        
+
+        .destination-hero {
+            min-height: 55vh;
+
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                ),
+                url("Background.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            color: white;
+        }
+
+        .destination-hero h1 {
+            font-size: 55px;
+            font-weight: bold;
+        }
+
+        .destination-hero p {
+            font-size: 21px;
+        }
+
+
+        
+
+        .intro {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .intro h2 {
+            color: #263238;
+            font-weight: bold;
+        }
+
+        .intro p {
+            max-width: 800px;
+            margin: auto;
+            color: #666;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+
+        
+        .destination-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+
+            box-shadow:
+                0 5px 18px rgba(0, 0, 0, 0.10);
+
+            transition: 0.3s;
+        }
+
+        .destination-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 12px 28px rgba(0, 0, 0, 0.18);
+        }
+
+        .destination-card img {
+            height: 230px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .destination-card .card-body {
+            padding: 25px;
+        }
+
+        .destination-card h3 {
+            color: #8b1e3f;
+            font-size: 23px;
+        }
+
+        .destination-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .btn-explore {
+            background-color: #d4a017;
+            color: #222;
+            border: none;
+            font-weight: bold;
+            border-radius: 25px;
+            padding: 10px 20px;
+            transition: 0.3s;
+        }
+
+        .btn-explore:hover {
+            background-color: #b1840d;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+
+        
+
+        .modal-header {
+            background-color: #263238;
+            color: white;
+        }
+
+        .modal-title {
+            color: #d4a017;
+        }
+
+
+        
+
+        footer {
+            background-color: #171c1f;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+        }
+
+
+        
+
+        @media (max-width: 768px) {
+
+            .destination-hero {
+                min-height: 45vh;
+            }
+
+            .destination-hero h1 {
+                font-size: 40px;
+            }
+
+            .destination-hero p {
+                font-size: 18px;
+            }
+
+            .destination-card img {
+                height: 210px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+   
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="index.html">
+                🇱🇸 Discover Lesotho
+            </a>
+
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="ABOUT.html">
+                            ABOUT
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="DESTINATION.html">
+                            DESTINATIONS
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="ACTIVITIES.html">
+                            ACTIVITIES
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Gallery.html">
+                            Gallery
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="CONTACT.html">
+                           CONTACT
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <header class="destination-hero">
+
+        <div>
+
+            <h1>Explore Lesotho</h1>
+
+            <p>
+                Discover breathtaking places in the Kingdom in the Sky
+            </p>
+
+        </div>
+
+    </header>
+
+
+   
+
+    <section class="intro">
+
+        <div class="container">
+
+            <h2 class="mb-4">
+                Discover Our Destinations
+            </h2>
+
+            <p>
+                Lesotho offers beautiful mountains, waterfalls,
+                historical sites and natural landscapes. Explore
+                some of the destinations that make the Kingdom
+                in the Sky a special place to visit.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    
+
+    <section class="pb-5">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+
+                
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card destination-card h-100">
+
+                        <img
+                            src="MALETSUNYANE.jpeg"
+                            alt="Waterfall and mountain landscape">
+
+                        <div class="card-body">
+
+                            <h3>
+                                Maletsunyane Falls
+                            </h3>
+
+                            <p>
+                                A spectacular waterfall surrounded
+                                by beautiful mountain scenery and
+                                natural landscapes.
+                            </p>
+
+                            <button
+                                class="btn btn-explore"
+                                data-bs-toggle="modal"
+                                data-bs-target="#maletsunyaneModal">
+
+                                Learn More
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card destination-card h-100">
+
+                        <img
+                            src="land.jpg"
+                            alt="Mountain landscape">
+
+                        <div class="card-body">
+
+                            <h3>
+                                Thaba-Bosiu
+                            </h3>
+
+                            <p>
+                                Explore an important historical and
+                                cultural destination connected to the
+                                heritage of Lesotho.
+                            </p>
+
+                            <button
+                                class="btn btn-explore"
+                                data-bs-toggle="modal"
+                                data-bs-target="#thabaBosiuModal">
+
+                                Learn More
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+          
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card destination-card h-100">
+
+                        <img
+                            src="KATSE.jpg"
+                            alt="Large dam surrounded by mountains">
+
+                        <div class="card-body">
+
+                            <h3>
+                                Katse Dam
+                            </h3>
+
+                            <p>
+                                Enjoy impressive mountain scenery
+                                around one of Lesotho's well-known
+                                dam destinations.
+                            </p>
+
+                            <button
+                                class="btn btn-explore"
+                                data-bs-toggle="modal"
+                                data-bs-target="#katseModal">
+
+                                Learn More
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+         
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card destination-card h-100">
+
+                        <img
+                            src="BOKONG.jpg"
+                            alt="Mountain nature landscape">
+
+                        <div class="card-body">
+
+                            <h3>
+                                Bokong Nature Reserve
+                            </h3>
+
+                            <p>
+                                Experience peaceful highland scenery
+                                and the natural beauty of Lesotho.
+                            </p>
+
+                            <button
+                                class="btn btn-explore"
+                                data-bs-toggle="modal"
+                                data-bs-target="#bokongModal">
+
+                                Learn More
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card destination-card h-100">
+
+                        <img
+                            src="sehlabathebe.jpg"
+                            alt="Mountain landscape in nature">
+
+                        <div class="card-body">
+
+                            <h3>
+                                Sehlabathebe National Park
+                            </h3>
+
+                            <p>
+                                Discover dramatic landscapes and
+                                beautiful natural surroundings.
+                            </p>
+
+                            <button
+                                class="btn btn-explore"
+                                data-bs-toggle="modal"
+                                data-bs-target="#sehlabathebeModal">
+
+                                Learn More
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+               
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card destination-card h-100">
+
+                        <img
+                            src="AFRISKI.jpg"
+                            alt="Snow covered mountain">
+
+                        <div class="card-body">
+
+                            <h3>
+                                Afriski Mountain Resort
+                            </h3>
+
+                            <p>
+                                A mountain destination known for
+                                winter activities and beautiful
+                                highland scenery.
+                            </p>
+
+                            <button
+                                class="btn btn-explore"
+                                data-bs-toggle="modal"
+                                data-bs-target="#afriskiModal">
+
+                                Learn More
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+   
+
+    <div class="modal fade" id="maletsunyaneModal">
+
+        <div class="modal-dialog modal-lg">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Maletsunyane Falls
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <p>
+                        Maletsunyane Falls is one of the
+                        spectacular natural attractions associated
+                        with Lesotho's mountainous landscape.
+                    </p>
+
+                    <p>
+                        Visitors can enjoy the surrounding scenery
+                        and outdoor experiences.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    
+
+    <div class="modal fade" id="thabaBosiuModal">
+
+        <div class="modal-dialog modal-lg">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Thaba-Bosiu
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <p>
+                        Thaba-Bosiu is an important historical
+                        and cultural destination in Lesotho.
+                    </p>
+
+                    <p>
+                        Visitors can learn more about the history
+                        and heritage associated with the site.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+  
+    <div class="modal fade" id="katseModal">
+
+        <div class="modal-dialog modal-lg">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Katse Dam
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <p>
+                        Katse Dam is surrounded by spectacular
+                        mountain scenery and is an important
+                        destination for visitors exploring
+                        Lesotho's highlands.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    
+
+    <div class="modal fade" id="bokongModal">
+
+        <div class="modal-dialog modal-lg">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Bokong Nature Reserve
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <p>
+                        Bokong Nature Reserve offers visitors
+                        beautiful highland scenery and an
+                        opportunity to experience Lesotho's
+                        natural environment.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    
+
+    <div class="modal fade" id="sehlabathebeModal">
+
+        <div class="modal-dialog modal-lg">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Sehlabathebe National Park
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <p>
+                        Sehlabathebe National Park is known for
+                        its dramatic natural landscapes and
+                        beautiful highland environment.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    
+
+    <div class="modal fade" id="afriskiModal">
+
+        <div class="modal-dialog modal-lg">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Afriski Mountain Resort
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <p>
+                        Afriski is a mountain destination where
+                        visitors can enjoy winter activities and
+                        the spectacular highland environment.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    
+
+    <section class="text-center py-5">
+
+        <div class="container">
+
+            <h2>
+                Ready for an Adventure?
+            </h2>
+
+            <p>
+                Discover exciting activities to enjoy during
+                your visit to Lesotho.
+            </p>
+
+            <a
+                href="activities.html"
+                class="btn btn-warning btn-lg">
+
+                Explore Activities
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    
+
+    <footer>
+
+        <p class="mb-0">
+            &copy; 2026 Discover Lesotho.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- Bootstrap JavaScript -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>

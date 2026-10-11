@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | Discover Lesotho</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f5f0;
+            color: #263238;
+        }
+
+        .navbar {
+            background-color: #263238;
+        }
+
+        .navbar-brand {
+            color: #d4a017 !important;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: white !important;
+            margin-left: 10px;
+        }
+
+        .nav-link:hover {
+            color: #d4a017 !important;
+        }
+
+        
+
+        .hero {
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.55),
+                    rgba(0,0,0,0.55)
+                ),
+                url("Background4.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            height: 350px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        
+
+        .section-title {
+            color: #8b1e3f;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+
+        .gallery-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+
+            border-radius: 12px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.04);
+            opacity: 0.85;
+        }
+
+        
+        .gallery-card {
+            background-color: white;
+            padding: 10px;
+            border-radius: 15px;
+
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+
+            height: 100%;
+        }
+
+        .gallery-card p {
+            text-align: center;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #8b1e3f;
+        }
+
+      
+
+        #modalImage {
+            width: 100%;
+            max-height: 75vh;
+            object-fit: contain;
+        }
+
+        
+
+        footer {
+            background-color: #263238;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+        }
+
+        footer span {
+            color: #d4a017;
+        }
+
+       
+
+        @media (max-width: 768px) {
+
+            .hero {
+                height: 280px;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .gallery-img {
+                height: 220px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="index.html">
+            Discover Lesotho
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="ABOUT.html">
+                        ABOUT
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="DESTINATION.html">
+                        DESTINATIONS
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="ACTIVITIES.html">
+                        ACTIVITIES
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="GALLERY.html">
+                        GALLERY
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="CONTACT.html">
+                        CONTACT
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<section class="hero">
+
+    <div>
+
+        <h1>Lesotho Gallery</h1>
+
+        <p>
+            Explore the beauty of the Mountain Kingdom.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+
+<main class="container py-5">
+
+    <h2 class="section-title">
+        Discover Lesotho Through Pictures
+    </h2>
+
+    <p class="text-center mb-5">
+        Take a visual journey through the mountains,
+        culture and beautiful landscapes of Lesotho.
+    </p>
+
+
+    <div class="row g-4">
+
+
+       
+
+        <div class="col-sm-6 col-lg-4">
+
+            <div class="gallery-card">
+
+                <img
+                    src="land.jpg"
+                    class="gallery-img"
+                    alt="Mountain landscape"
+                    onclick="openImage(this.src, this.alt)">
+
+                <p>Mountain Landscapes</p>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="col-sm-6 col-lg-4">
+
+            <div class="gallery-card">
+
+                <img
+                    src="pretty.jpg"
+                    class="gallery-img"
+                    alt="Beautiful natural landscape"
+                    onclick="openImage(this.src, this.alt)">
+
+                <p>Beautiful Nature</p>
+
+            </div>
+
+        </div>
+
+
+        
+
+        <div class="col-sm-6 col-lg-4">
+
+            <div class="gallery-card">
+
+                <img
+                    src="nature.jpg"
+                    class="gallery-img"
+                    alt="Forest landscape"
+                    onclick="openImage(this.src, this.alt)">
+
+                <p>Natural Beauty</p>
+
+            </div>
+
+        </div>
+
+
+       
+
+        <div class="col-sm-6 col-lg-4">
+
+            <div class="gallery-card">
+
+                <img
+                    src="hirritage.jpg"
+                    class="gallery-img"
+                    alt="African cultural experience"
+                    onclick="openImage(this.src, this.alt)">
+
+                <p>Culture & Heritage</p>
+
+            </div>
+
+        </div>
+
+
+     
+
+        <div class="col-sm-6 col-lg-4">
+
+            <div class="gallery-card">
+
+                <img
+                    src="hiking.jpg"
+                    class="gallery-img"
+                    alt="Mountain hiking"
+                    onclick="openImage(this.src, this.alt)">
+
+                <p>Mountain Adventures</p>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="col-sm-6 col-lg-4">
+
+            <div class="gallery-card">
+
+                <img
+                    src="winter.jpg"
+                    class="gallery-img"
+                    alt="Winter mountain activity"
+                    onclick="openImage(this.src, this.alt)">
+
+                <p>Winter Experiences</p>
+
+            </div>
+
+        </div>
+
+
+      
+
+        <div class="col-sm-6 col-lg-4">
+
+            <div class="gallery-card">
+
+                <img
+                    src="Camping.png"
+                    class="gallery-img"
+                    alt="Camping in nature"
+                    onclick="openImage(this.src, this.alt)">
+
+                <p>Outdoor Adventures</p>
+
+            </div>
+
+        </div>
+
+
+     
+
+        <div class="col-sm-6 col-lg-4">
+
+            <div class="gallery-card">
+
+                <img
+                    src="snec.jpg"
+                    class="gallery-img"
+                    alt="Scenic mountain view"
+                    onclick="openImage(this.src, this.alt)">
+
+                <p>Scenic Views</p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="col-sm-6 col-lg-4">
+
+            <div class="gallery-card">
+
+                <img
+                    src="valley.jpg"
+                    class="gallery-img"
+                    alt="Mountain valley"
+                    onclick="openImage(this.src, this.alt)">
+
+                <p>Mountain Valleys</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+
+
+<div
+    class="modal fade"
+    id="imageModal"
+    tabindex="-1"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title" id="modalTitle">
+                    Lesotho
+                </h5>
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+
+            <div class="modal-body text-center">
+
+                <img
+                    id="modalImage"
+                    src=""
+                    alt="Selected gallery image">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+<footer>
+
+    <p class="mb-1">
+        © 2026 <span>Discover Lesotho</span>
+    </p>
+
+    <p class="mb-0">
+        Explore. Experience. Discover.
+    </p>
+
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- Gallery JavaScript -->
+
+<script>
+
+function openImage(imageSource, imageDescription) {
+
+    document.getElementById("modalImage").src = imageSource;
+
+    document.getElementById("modalImage").alt = imageDescription;
+
+    document.getElementById("modalTitle").textContent =
+        imageDescription;
+
+    const modal =
+        new bootstrap.Modal(
+            document.getElementById("imageModal")
+        );
+
+    modal.show();
+}
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Discover Lesotho</title>
+
+    <style>
+        
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f5f0;
+        }
+
+
+       
+
+        header {
+            min-height: 85vh;
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.45),
+                    rgba(0, 0, 0, 0.45)
+                ),
+                url("Background.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            padding: 30px;
+        }
+
+        header h1 {
+            font-size: 60px;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 24px;
+        }
+
+
+        nav {
+            background-color: #263238;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 10px;
+            padding: 18px;
+
+            position: sticky;
+            top: 0;
+
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+
+            padding: 10px 18px;
+
+            border-radius: 25px;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #d4a017;
+            color: #222;
+        }
+
+
+
+        main {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        
+
+        main > section:first-child {
+            text-align: center;
+            padding: 70px 25px;
+            background-color: white;
+        }
+
+        main > section:first-child h2 {
+            font-size: 40px;
+            color: #263238;
+            margin-bottom: 20px;
+        }
+
+        main > section:first-child p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 18px;
+            color: #555;
+        }
+
+        main > section:first-child a {
+            display: inline-block;
+
+            margin-top: 30px;
+
+            background-color: #d4a017;
+            color: white;
+
+            text-decoration: none;
+
+            padding: 14px 28px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        main > section:first-child a:hover {
+            background-color: #a97d08;
+            transform: translateY(-3px);
+        }
+
+
+
+        section {
+            padding: 60px 25px;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 35px;
+            color: #263238;
+        }
+
+
+
+        main > section:nth-of-type(2),
+        main > section:nth-of-type(3) {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        main > section:nth-of-type(2) h2,
+        main > section:nth-of-type(3) h2 {
+            grid-column: 1 / -1;
+        }
+
+        article {
+            background-color: white;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.08);
+
+            transition: 0.3s;
+        }
+
+        article:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        article h3 {
+            color: #8b1e3f;
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        article p {
+            color: #555;
+        }
+
+
+        
+        aside {
+            background-color: #263238;
+            color: white;
+
+            text-align: center;
+
+            padding: 50px 25px;
+        }
+
+        aside h2 {
+            color: #d4a017;
+            margin-bottom: 15px;
+        }
+
+        aside p {
+            max-width: 700px;
+            margin: auto;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background-color: #171c1f;
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+        }
+
+
+
+        @media (max-width: 768px) {
+
+            header {
+                min-height: 70vh;
+            }
+
+            header h1 {
+                font-size: 42px;
+            }
+
+            header p {
+                font-size: 19px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+
+            main > section:nth-of-type(2),
+            main > section:nth-of-type(3) {
+                grid-template-columns: 1fr;
+            }
+
+            section h2 {
+                font-size: 30px;
+            }
+        }
+
+
+        @media (max-width: 480px) {
+
+            header h1 {
+                font-size: 34px;
+            }
+
+            header p {
+                font-size: 17px;
+            }
+
+            nav {
+                gap: 5px;
+            }
+
+            nav a {
+                font-size: 13px;
+                padding: 7px 9px;
+            }
+
+            main > section:first-child h2 {
+                font-size: 30px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    
+    <header>
+
+        <h1>Discover Lesotho</h1>
+
+        <p>
+            Explore the Kingdom in the Sky
+        </p>
+
+    </header>
+
+
+    
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="ABOUT.html">ABOUT</a>
+
+        <a href="DESTINATION.html">DESTINATIONS</a>
+
+        <a href="ACTIVITIES.html">ACTIVITIES</a>
+
+        <a href="Gallery.html">Gallery</a>
+
+        <a href="CONTACT.html">CONTACT</a>
+
+    </nav>
+
+
+    
+    <main>
+
+
+        
+        <section>
+
+            <h2>Welcome to Lesotho 🇱🇸</h2>
+
+            <p>
+                Discover the beauty of Lesotho, the Kingdom in the Sky.
+                Explore breathtaking mountains, beautiful waterfalls,
+                rich culture and unforgettable tourist destinations.
+            </p>
+
+            <a href="DESTINATION.html">
+                Explore Destinations
+            </a>
+
+        </section>
+
+
+       
+        <section>
+
+            <h2>Why Visit Lesotho?</h2>
+
+
+            <article>
+
+                <h3>🏔️ Beautiful Mountains</h3>
+
+                <p>
+                    Experience the spectacular mountains and
+                    breathtaking landscapes of Lesotho.
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <h3>🇱🇸 Rich Culture</h3>
+
+                <p>
+                    Discover Basotho culture, traditions,
+                    history and traditional lifestyle.
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <h3>🐎 Adventure</h3>
+
+                <p>
+                    Enjoy exciting activities such as hiking,
+                    horse riding, camping and skiing.
+                </p>
+
+            </article>
+
+        </section>
+
+
+       
+        <section>
+
+            <h2>Popular Destinations</h2>
+
+
+            <article>
+
+                <h3>🌊 Maletsunyane Falls</h3>
+
+                <p>
+                    Discover one of Lesotho's most beautiful
+                    natural attractions.
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <h3>⛰️ Thaba-Bosiu</h3>
+
+                <p>
+                    Visit this important historical and
+                    cultural site of Lesotho.
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <h3>💧 Katse Dam</h3>
+
+                <p>
+                    Experience the spectacular Katse Dam
+                    surrounded by beautiful mountains.
+                </p>
+
+            </article>
+
+        </section>
+
+
+       
+        <aside>
+
+            <h2>Plan Your Visit</h2>
+
+            <p>
+                Explore our destinations and activities
+                and start planning your unforgettable
+                journey through Lesotho.
+            </p>
+
+        </aside>
+
+    </main>
+
+
+   
+    <footer>
+
+        <p>
+            &copy; 2026 Discover Lesotho.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
